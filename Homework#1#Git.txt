@@ -1,0 +1,977 @@
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects (master)
+$ git clone git@github.com:DmitryGontsa/GL_BaseCamp.git
+Cloning into 'GL_BaseCamp'...
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (4/4), done.
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects (master)
+$ cd GL_BaseCamp
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls
+README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls -la
+total 18
+drwxr-xr-x 1 DMITRY GONTSA 197121   0 ноя 19 12:25 ./
+drwxr-xr-x 1 DMITRY GONTSA 197121   0 ноя 19 12:25 ../
+drwxr-xr-x 1 DMITRY GONTSA 197121   0 ноя 19 12:26 .git/
+-rw-r--r-- 1 DMITRY GONTSA 197121 301 ноя 19 12:25 .gitignore
+-rw-r--r-- 1 DMITRY GONTSA 197121  13 ноя 19 12:25 README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git remote -vv
+origin  git@github.com:DmitryGontsa/GL_BaseCamp.git (fetch)
+origin  git@github.com:DmitryGontsa/GL_BaseCamp.git (push)
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ touch LoginPageTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        LoginPageTests.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git add LoginPageTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   LoginPageTests.java
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git commit -m "Added LoginPageTests"
+[main ddec209] Added LoginPageTests
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 LoginPageTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit ddec2092552636fef5125bf29cb76f01b5664d8e (HEAD -> main)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c (origin/main, origin/HEAD)
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git push
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 334 bytes | 334.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:DmitryGontsa/GL_BaseCamp.git
+   19a4867..ddec209  main -> main
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls
+LoginPageTests.java  README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ vim LoginPageTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   LoginPageTests.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git add .
+warning: LF will be replaced by CRLF in LoginPageTests.java.
+The file will have its original line endings in your working directory
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   LoginPageTests.java
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git commit -m "Modified LoginPageTests"
+[main 1e83f51] Modified LoginPageTests
+ 1 file changed, 73 insertions(+)
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f (HEAD -> main)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e (origin/main, origin/HEAD)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git pull
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+Already up to date.
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git push
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.07 KiB | 1.07 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:DmitryGontsa/GL_BaseCamp.git
+   ddec209..1e83f51  main -> main
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f (HEAD -> main, origin/main, origin/HEAD)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git reset --soft HEAD~1
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   LoginPageTests.java
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git reset HEAD LoginPageTests.java
+Unstaged changes after reset:
+M       LoginPageTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   LoginPageTests.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git checkout LoginPageTests.java
+Updated 1 path from the index
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls
+LoginPageTests.java  README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls -la
+total 22
+drwxr-xr-x 1 DMITRY GONTSA 197121   0 ноя 19 12:53 ./
+drwxr-xr-x 1 DMITRY GONTSA 197121   0 ноя 19 12:25 ../
+drwxr-xr-x 1 DMITRY GONTSA 197121   0 ноя 19 12:53 .git/
+-rw-r--r-- 1 DMITRY GONTSA 197121 301 ноя 19 12:25 .gitignore
+-rw-r--r-- 1 DMITRY GONTSA 197121   0 ноя 19 12:53 LoginPageTests.java
+-rw-r--r-- 1 DMITRY GONTSA 197121  13 ноя 19 12:25 README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ rm LoginPageTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    LoginPageTests.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git add .
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    LoginPageTests.java
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git commit -m "Deleted LoginPageTests"
+[main 15866d8] Deleted LoginPageTests
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 LoginPageTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 15866d8f036811ff8e48964dac78d3772ec671ba (HEAD -> main)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls
+README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git pull
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+CONFLICT (modify/delete): LoginPageTests.java deleted in HEAD and modified in 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f. Version 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f of LoginPageTests.java left in tree.
+Automatic merge failed; fix conflicts and then commit the result.
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ vim LoginPageTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+
+        deleted by us:   LoginPageTests.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ git add .
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        new file:   LoginPageTests.java
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ git commit -m "Conclude merge of LoginPageTests"
+[main 8490155] Conclude merge of LoginPageTests
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2 (HEAD -> main)
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f (origin/main, origin/HEAD)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git push
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 489 bytes | 489.00 KiB/s, done.
+Total 3 (delta 0), reused 1 (delta 0)
+To github.com:DmitryGontsa/GL_BaseCamp.git
+   1e83f51..8490155  main -> main
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2 (HEAD -> main, origin/main, origin/HEAD)
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls
+LoginPageTests.java  README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls -la
+total 26
+drwxr-xr-x 1 DMITRY GONTSA 197121    0 ноя 19 13:03 ./
+drwxr-xr-x 1 DMITRY GONTSA 197121    0 ноя 19 12:25 ../
+drwxr-xr-x 1 DMITRY GONTSA 197121    0 ноя 19 13:10 .git/
+-rw-r--r-- 1 DMITRY GONTSA 197121  301 ноя 19 12:25 .gitignore
+-rw-r--r-- 1 DMITRY GONTSA 197121 3656 ноя 19 13:01 LoginPageTests.java
+-rw-r--r-- 1 DMITRY GONTSA 197121   13 ноя 19 12:25 README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2 (HEAD -> main, origin/main, origin/HEAD)
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ cat LoginPageTests.java
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+public class LoginPageTests {
+
+    private static final String VALID_EMAIL = "dmitriy.gontsa@gmail.com";
+    private static final String INVALID_EMAIL = "dmitriygontsagmailcom";
+    private static final String VALID_PASSWORD = "!Q@W#E4r5t";
+    private static final String INVALID_PASSWORD = "12345";
+    private static final By EMAIL_INPUT_LOCATOR = By.name("email");
+    private static final By PASSWORD_INPUT_LOCATOR = By.name("password");
+    private static final By LOG_IN_BUTTON_LOCATOR = By.className("submit");
+    private static final By ERROR_MASSAGES_LOCATOR = By.cssSelector(".error>*");
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+    @BeforeMethod
+    public void startUp() {
+        driver = new ChromeDriver();
+        wait = new WebDriverWait(driver, 15);
+        driver.get("https://semantic-ui.com/examples/login.html");
+    }
+
+    @Test
+    public void positiveTest() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(EMAIL_INPUT_LOCATOR)).sendKeys(VALID_EMAIL);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_INPUT_LOCATOR)).sendKeys(VALID_PASSWORD);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LOG_IN_BUTTON_LOCATOR)).click();
+        Assert.assertTrue(driver.findElements(ERROR_MASSAGES_LOCATOR).size() == 0);
+    }
+
+    @Test
+    public void invalidEmailTest() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(EMAIL_INPUT_LOCATOR)).sendKeys(INVALID_EMAIL);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_INPUT_LOCATOR)).sendKeys(VALID_PASSWORD);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LOG_IN_BUTTON_LOCATOR)).click();
+        Assert.assertTrue(driver.findElements(By.xpath("//li[contains(text(),'Please enter a valid e-mail')]")).size() > 0);
+    }
+
+    @Test
+    public void invalidPasswordTest() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(EMAIL_INPUT_LOCATOR)).sendKeys(VALID_EMAIL);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_INPUT_LOCATOR)).sendKeys(INVALID_PASSWORD);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LOG_IN_BUTTON_LOCATOR)).click();
+        Assert.assertTrue(driver.findElements(By.xpath("//li[contains(text(),'Your password must be at least 6 characters')]")).size() > 0);
+    }
+
+    @Test
+    public void emptyEmailTest() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(PASSWORD_INPUT_LOCATOR)).sendKeys(VALID_PASSWORD);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LOG_IN_BUTTON_LOCATOR)).click();
+        Assert.assertTrue(driver.findElements(By.xpath("//li[contains(text(),'Please enter your e-mail')]")).size() > 0);
+    }
+
+    @Test
+    public void emptyPasswordTest() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(EMAIL_INPUT_LOCATOR)).sendKeys(VALID_EMAIL);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(LOG_IN_BUTTON_LOCATOR)).click();
+        Assert.assertTrue(driver.findElements(By.xpath("//li[contains(text(),'Please enter your password')]")).size() > 0);
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
+}
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2 (HEAD -> main, origin/main, origin/HEAD)
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git checkout 19a4867
+Note: checking out '19a4867'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 19a4867 Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp ((19a4867...))
+$ git log
+commit 19a486756f38e0881fe522c71416910e329ce98c (HEAD)
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp ((19a4867...))
+$ git checkout -b "SmokeTests"
+Switched to a new branch 'SmokeTests'
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (SmokeTests)
+$ git log
+commit 19a486756f38e0881fe522c71416910e329ce98c (HEAD -> SmokeTests)
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (SmokeTests)
+$ git log --oneline --decorate --graph --all
+*   8490155 (origin/main, origin/HEAD, main) Conclude merge of LoginPageTests
+|\
+| * 1e83f51 Modified LoginPageTests
+* | 15866d8 Deleted LoginPageTests
+|/
+* ddec209 Added LoginPageTests
+* 19a4867 (HEAD -> SmokeTests) Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (SmokeTests)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2 (HEAD -> main, origin/main, origin/HEAD)
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c (SmokeTests)
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ touch Properties
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Properties
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git rm --cached Properties
+fatal: pathspec 'Properties' did not match any files
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git add Properties
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Properties
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git rm --cached Properties
+rm 'Properties'
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Properties
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ cat .gitignore
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ vim .gitignore
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ cat .gitignore
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Properties Files
+Properties
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls
+LoginPageTests.java  Properties  README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git commit -am "Modified .gitignore file"
+[main 3b521e6] Modified .gitignore file
+ 1 file changed, 3 insertions(+)
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 3b521e64638d96c3dd03ec4e7b0b303e3b9fe053 (HEAD -> main)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:43:17 2020 +0200
+
+    Modified .gitignore file
+
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2 (origin/main, origin/HEAD)
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c (SmokeTests)
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git fetch
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git push
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 387 bytes | 387.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:DmitryGontsa/GL_BaseCamp.git
+   8490155..3b521e6  main -> main
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 3b521e64638d96c3dd03ec4e7b0b303e3b9fe053 (HEAD -> main, origin/main, origin/HEAD)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:43:17 2020 +0200
+
+    Modified .gitignore file
+
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c (SmokeTests)
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls
+LoginPageTests.java  Properties  README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ ls -la
+total 26
+drwxr-xr-x 1 DMITRY GONTSA 197121    0 ноя 19 13:40 ./
+drwxr-xr-x 1 DMITRY GONTSA 197121    0 ноя 19 12:25 ../
+drwxr-xr-x 1 DMITRY GONTSA 197121    0 ноя 19 13:44 .git/
+-rw-r--r-- 1 DMITRY GONTSA 197121  335 ноя 19 13:40 .gitignore
+-rw-r--r-- 1 DMITRY GONTSA 197121 3656 ноя 19 13:22 LoginPageTests.java
+-rw-r--r-- 1 DMITRY GONTSA 197121    0 ноя 19 13:26 Properties
+-rw-r--r-- 1 DMITRY GONTSA 197121   13 ноя 19 12:25 README.md
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$
