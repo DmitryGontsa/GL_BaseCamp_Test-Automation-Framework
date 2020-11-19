@@ -1,0 +1,397 @@
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 3b521e64638d96c3dd03ec4e7b0b303e3b9fe053 (HEAD -> main, origin/main, origin/HEAD)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:43:17 2020 +0200
+
+    Modified .gitignore file
+
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c (SmokeTests)
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git branch PositiveTests
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ touch PositiveTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        PositiveTests.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ vim PositiveTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git add .
+warning: LF will be replaced by CRLF in PositiveTests.java.
+The file will have its original line endings in your working directory
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   PositiveTests.java
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git commit -m "Added PositiveTests"
+[main 56ffd81] Added PositiveTests
+ 1 file changed, 1 insertion(+)
+ create mode 100644 PositiveTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git push
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 437 bytes | 437.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:DmitryGontsa/GL_BaseCamp.git
+   3b521e6..56ffd81  main -> main
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 56ffd81f8c38bbf1658153fe867199828de30833 (HEAD -> main, origin/main, origin/HEAD)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 14:04:41 2020 +0200
+
+    Added PositiveTests
+
+commit 3b521e64638d96c3dd03ec4e7b0b303e3b9fe053 (PositiveTests)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:43:17 2020 +0200
+
+    Modified .gitignore file
+
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c (SmokeTests)
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git checkout PositiveTests
+Switched to branch 'PositiveTests'
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (PositiveTests)
+$ vim PositiveTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (PositiveTests)
+$ git add .
+warning: LF will be replaced by CRLF in PositiveTests.java.
+The file will have its original line endings in your working directory
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (PositiveTests)
+$ git status
+On branch PositiveTests
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   PositiveTests.java
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (PositiveTests)
+$ git commit -m "Added PositiveTests"
+[PositiveTests ed938ef] Added PositiveTests
+ 1 file changed, 1 insertion(+)
+ create mode 100644 PositiveTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (PositiveTests)
+$ git log
+commit ed938efe2181389f418b79025605e525a0a8daf8 (HEAD -> PositiveTests)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 14:11:45 2020 +0200
+
+    Added PositiveTests
+
+commit 3b521e64638d96c3dd03ec4e7b0b303e3b9fe053
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:43:17 2020 +0200
+
+    Modified .gitignore file
+
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+commit ddec2092552636fef5125bf29cb76f01b5664d8e
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:36:06 2020 +0200
+
+    Added LoginPageTests
+
+commit 19a486756f38e0881fe522c71416910e329ce98c (SmokeTests)
+Author: Dmitry <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:22:44 2020 +0200
+
+    Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (PositiveTests)
+$ git log --oneline --decorate --graph --all
+* ed938ef (HEAD -> PositiveTests) Added PositiveTests
+| * 56ffd81 (origin/main, origin/HEAD, main) Added PositiveTests
+|/
+* 3b521e6 Modified .gitignore file
+*   8490155 Conclude merge of LoginPageTests
+|\
+| * 1e83f51 Modified LoginPageTests
+* | 15866d8 Deleted LoginPageTests
+|/
+* ddec209 Added LoginPageTests
+* 19a4867 (SmokeTests) Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (PositiveTests)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git merge PositiveTests
+CONFLICT (add/add): Merge conflict in PositiveTests.java
+Auto-merging PositiveTests.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ cat PositiveTests.java
+<<<<<<< HEAD
+Assert.assertTrue(driver.findElements(ERROR_MASSAGES_LOCATOR).size() == 0);
+=======
+Assert.assertTrue(driver.findElements(By.xpath("//li[contains(text(),'Please enter a valid e-mail')]")).size() > 0);
+>>>>>>> PositiveTests
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ vim PositiveTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ cat PositiveTests.java
+Assert.assertTrue(driver.findElements(By.xpath("//li[contains(text(),'Please enter a valid e-mail')]")).size() > 0);
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both added:      PositiveTests.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ git add .
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   PositiveTests.java
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main|MERGING)
+$ git commit -m "Fixed merge conflict of PositiveTests.java"
+[main 73f1fc6] Fixed merge conflict of PositiveTests.java
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log
+commit 73f1fc66cf805fd0433593b12d8e13d14b8e56c7 (HEAD -> main)
+Merge: 56ffd81 ed938ef
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 14:24:55 2020 +0200
+
+    Fixed merge conflict of PositiveTests.java
+
+commit ed938efe2181389f418b79025605e525a0a8daf8 (PositiveTests)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 14:11:45 2020 +0200
+
+    Added PositiveTests
+
+commit 56ffd81f8c38bbf1658153fe867199828de30833 (origin/main, origin/HEAD)
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 14:04:41 2020 +0200
+
+    Added PositiveTests
+
+commit 3b521e64638d96c3dd03ec4e7b0b303e3b9fe053
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:43:17 2020 +0200
+
+    Modified .gitignore file
+
+commit 8490155c4b9456a7852fa69c3c58e68b976c8eb2
+Merge: 15866d8 1e83f51
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 13:10:21 2020 +0200
+
+    Conclude merge of LoginPageTests
+
+commit 15866d8f036811ff8e48964dac78d3772ec671ba
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:59:58 2020 +0200
+
+    Deleted LoginPageTests
+
+commit 1e83f511ad11e0ffb6bfe36b6e0cf030ad085d4f
+Author: dmitry.gontsa <dmitry.gontsa.invest@gmail.com>
+Date:   Thu Nov 19 12:45:30 2020 +0200
+
+    Modified LoginPageTests
+
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log --oneline --decorate --graph --all
+*   73f1fc6 (HEAD -> main) Fixed merge conflict of PositiveTests.java
+|\
+| * ed938ef (PositiveTests) Added PositiveTests
+* | 56ffd81 (origin/main, origin/HEAD) Added PositiveTests
+|/
+* 3b521e6 Modified .gitignore file
+*   8490155 Conclude merge of LoginPageTests
+|\
+| * 1e83f51 Modified LoginPageTests
+* | 15866d8 Deleted LoginPageTests
+|/
+* ddec209 Added LoginPageTests
+* 19a4867 (SmokeTests) Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git fetch
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git pull
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+Already up to date.
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git push
+Enter passphrase for key '/c/Users/DMITRY GONTSA/.ssh/id_rsa':
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 519 bytes | 519.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To github.com:DmitryGontsa/GL_BaseCamp.git
+   56ffd81..73f1fc6  main -> main
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$ git log --oneline --decorate --graph --all
+*   73f1fc6 (HEAD -> main, origin/main, origin/HEAD) Fixed merge conflict of PositiveTests.java
+|\
+| * ed938ef (PositiveTests) Added PositiveTests
+* | 56ffd81 Added PositiveTests
+|/
+* 3b521e6 Modified .gitignore file
+*   8490155 Conclude merge of LoginPageTests
+|\
+| * 1e83f51 Modified LoginPageTests
+* | 15866d8 Deleted LoginPageTests
+|/
+* ddec209 Added LoginPageTests
+* 19a4867 (SmokeTests) Initial commit
+
+DMITRY GONTSA@DESKTOP-NJTMSSB MINGW64 ~/IdeaProjects/GL_BaseCamp (main)
+$
