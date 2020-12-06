@@ -1,0 +1,128 @@
+!!! ================================= Task_№1: ================================= !!!
+
+    - Create path ~/f1/f2/f3/f4/f5/f6; 
+    - Create and fill in text file in f1 folder; 
+    - Copy it to f6 folder; Navigate to Home folder; 
+    - Find copied file and remove it.
+
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls
+ automation-tests   Документы   Изображения   Общедоступные   Шаблоны
+ Видео              Загрузки    Музыка       'Рабочий стол'
+dmitry_gontsa@Ubuntu-VirtualBox:~$ mkdir -p ./f1/f2/f3/f4/f5/f6
+dmitry_gontsa@Ubuntu-VirtualBox:~$ touch ./f1/Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls ./f1
+f2  Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ~
+bash: /home/dmitry_gontsa: Это каталог
+dmitry_gontsa@Ubuntu-VirtualBox:~$ cp ~/f1/Smoke_tests.txt ~/f1/f2/f3/f4/f5/f6/Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ find ~ -iname Smoke_tests.txt
+/home/dmitry_gontsa/f1/Smoke_tests.txt
+/home/dmitry_gontsa/f1/f2/f3/f4/f5/f6/Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ rm ~/f1/f2/f3/f4/f5/f6/Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ find ~ -iname Smoke_tests.txt
+/home/dmitry_gontsa/f1/Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ 
+
+
+!!! ================================= Task_№2: ================================= !!!
+
+    - Redirect errors only output into separate file.
+
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls ./f1
+f2  Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls ~/f1/ ~/f1/f2/asd/ 2> ~/f1/log.txt
+/home/dmitry_gontsa/f1/:
+f2  log.txt  Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ cat ./f1/log.txt
+ls: невозможно получить доступ к '/home/dmitry_gontsa/f1/f2/asd/': Нет такого файла или каталога
+dmitry_gontsa@Ubuntu-VirtualBox:~$ 
+
+
+!!! ================================= Task_№3: ================================= !!!
+
+    - Redirect error and standart outputs into separate file.
+
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls ./f1
+f2  log.txt  Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ cat ./f1/log.txt
+ls: невозможно получить доступ к '/home/dmitry_gontsa/f1/f2/asd/': Нет такого файла или каталога
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls ~/f1/ ~/f1/f2/asd/ > ~/f1/log.txt 2>&1
+dmitry_gontsa@Ubuntu-VirtualBox:~$ cat ./f1/log.txt
+ls: невозможно получить доступ к '/home/dmitry_gontsa/f1/f2/asd/': Нет такого файла или каталога
+/home/dmitry_gontsa/f1/:
+f2
+log.txt
+Smoke_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ 
+
+
+!!! ================================= Task_№4: ================================= !!!
+
+    - Create file, change owner to root. Add permissions to execute file.
+
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls -la ./f1/f2
+итого 12
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:02 .
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:26 ..
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:02 f3
+dmitry_gontsa@Ubuntu-VirtualBox:~$ touch ./f1/f2/Positive_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ chown root ./f1/f2/Positive_tests.txt
+chown: изменение владельца './f1/f2/Positive_tests.txt': Операция не позволена
+dmitry_gontsa@Ubuntu-VirtualBox:~$ sudo chown root ./f1/f2/Positive_tests.txt
+[sudo] пароль для dmitry_gontsa: 
+dmitry_gontsa@Ubuntu-VirtualBox:~$ sudo chmod +x ./f1/f2/Positive_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls -la ./f1/f2
+итого 12
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:39 .
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:26 ..
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:02 f3
+-rwxrwxr-x 1 root          dmitry_gontsa    0 дек  5 22:39 Positive_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ 
+
+
+!!! ================================= Task_№5: ================================= !!!
+
+    - Make cmd2 executes only if cmd1 fails.
+
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls ./f1/f2
+f3  Positive_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ cat ./f1/f2/GUI_tests.txt || echo "GUI_tests.txt not found"
+cat: ./f1/f2/GUI_tests.txt: Нет такого файла или каталога
+GUI_tests.txt not found
+dmitry_gontsa@Ubuntu-VirtualBox:~$ 
+
+
+!!! ================================= Task_№6: ================================= !!!
+
+    - Make cmd2 executes only if cmd1 successful.
+
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls ./f1/f2
+f3  Positive_tests.txt
+dmitry_gontsa@Ubuntu-VirtualBox:~$ cat ./f1/f2/Positive_tests.txt && echo "Positive_tests.txt read successfully"
+Positive_tests.txt read successfully
+dmitry_gontsa@Ubuntu-VirtualBox:~$ 
+
+
+!!! ================================= Task_№7: ================================= !!!
+
+    - Create and execute sh file that prints current folder. 
+      NOTE: Do not use any text redactor.
+
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls ./f1/f2/f3/f4
+f5
+dmitry_gontsa@Ubuntu-VirtualBox:~$ touch ./f1/f2/f3/f4/execution.sh
+dmitry_gontsa@Ubuntu-VirtualBox:~$ echo "ls -la ./f1/f2/f3/f4" > ./f1/f2/f3/f4/execution.sh
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ls -la ./f1/f2/f3/f4
+итого 16
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 23:13 .
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:02 ..
+-rw-rw-r-- 1 dmitry_gontsa dmitry_gontsa   21 дек  5 23:15 execution.sh
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:02 f5
+dmitry_gontsa@Ubuntu-VirtualBox:~$ chmod +x ./f1/f2/f3/f4/execution.sh
+dmitry_gontsa@Ubuntu-VirtualBox:~$ ./f1/f2/f3/f4/execution.sh
+итого 16
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 23:13 .
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:02 ..
+-rwxrwxr-x 1 dmitry_gontsa dmitry_gontsa   21 дек  5 23:15 execution.sh
+drwxrwxr-x 3 dmitry_gontsa dmitry_gontsa 4096 дек  5 22:02 f5
+dmitry_gontsa@Ubuntu-VirtualBox:~$
